@@ -1,0 +1,313 @@
+{
+  "nav": {
+    "brand": "ChurroStack",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "askDemo": "Ask for a Demo",
+    "toggleTheme": "Toggle theme",
+    "selectLanguage": "Select language"
+  },
+  "hero": {
+    "badge": "Open Source Infrastructure Platform",
+    "title": "Your Infrastructure.",
+    "titleHighlight": "Your Rules.",
+    "subtitle": "Deploy applications, LLMs, and MCP tools on your own hardware — as simple as making churros. No vendor lock-in, no surprise bills, full control over your data and infrastructure.",
+    "cta": "Ask for a Demo",
+    "ctaSecondary": "View on GitHub",
+    "screenshotAlt": "ChurroStack platform dashboard showing deployed services and infrastructure overview"
+  },
+  "logosBar": {
+    "title": "Built for the tools you already use"
+  },
+  "features": {
+    "badge": "Key Features",
+    "title": "Everything you need to run your infrastructure",
+    "subtitle": "A complete platform for deploying, managing, and securing applications and AI workloads on your own hardware — without the complexity.",
+    "items": [
+      {
+        "title": "Private Hosting",
+        "description": "Deploy on your own servers. Your data never leaves your network. The platform only handles secure communication through reverse SSH tunnels."
+      },
+      {
+        "title": "One-Click Deployments",
+        "description": "Deploy Docker containers, Streamlit apps, or source code directly from Git. No DevOps expertise required."
+      },
+      {
+        "title": "LLM Hosting & Routing",
+        "description": "Host models from HuggingFace with vLLM, or route requests through a unified OpenAI-compatible endpoint with fallback and usage tracking."
+      },
+      {
+        "title": "Workspace Mode",
+        "description": "Give each user their own isolated deployment of any app — VSCode, development tools, or agentic workflows — all from a single configuration."
+      },
+      {
+        "title": "MCP & LLM Gallery",
+        "description": "Centralize AI resources for your organization. Share models, MCP tools, and API keys securely with teams and external clients."
+      },
+      {
+        "title": "Enterprise Security",
+        "description": "RBAC, OAuth/SSO, mTLS, network policies, and resource isolation built in. Every deployment is secured by default with Istio."
+      },
+      {
+        "title": "Environment Management",
+        "description": "Slice your infrastructure into environments for teams, departments, or stages (DEV/QA/PROD) with dedicated resource quotas."
+      },
+      {
+        "title": "Remote Desktop",
+        "description": "Run GUI applications like Playwright crawlers or browser-based tools with full remote desktop support via x11-vnc."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "From bare metal to production in minutes",
+    "subtitle": "Three simple steps to turn any server into a fully managed deployment platform.",
+    "steps": [
+      {
+        "title": "Connect Your Hardware",
+        "description": "Install the ChurroStack agent on any server (even behind NAT or home networks). A reverse SSH tunnel securely connects it to the platform — no public IP or VPN required."
+      },
+      {
+        "title": "Configure Environments",
+        "description": "Slice your server into environments using Kubernetes namespaces. Set CPU, memory, and GPU quotas. Assign teams and users with fine-grained RBAC."
+      },
+      {
+        "title": "Deploy & Manage",
+        "description": "Launch applications, LLMs, or MCP tools through a simple browser wizard. The platform handles deployment, monitoring, logs, authentication, and scaling."
+      }
+    ],
+    "diagramAlt": "Architecture diagram showing ChurroStack control plane connected to private infrastructure through secure reverse tunnels",
+    "diagramCaption": "ChurroStack connects your private infrastructure to a managed control plane through secure reverse tunnels"
+  },
+  "useCases": {
+    "badge": "Use Cases",
+    "title": "Built for real-world scenarios",
+    "subtitle": "From AI infrastructure to internal tools, ChurroStack adapts to the way your organization actually works.",
+    "items": [
+      {
+        "title": "GPU-Powered AI",
+        "description": "Got NVIDIA H100s collecting dust? Deploy vLLM models, encoders, rerankers, and AI document analyzers like Docling — without the Kubernetes headache."
+      },
+      {
+        "title": "Distributed Team Hardware",
+        "description": "Turn spare hardware from team members' homes or offices into a unified deployment platform. Even machines behind ISP NAT work perfectly."
+      },
+      {
+        "title": "Secure Business Apps",
+        "description": "Deploy internal Streamlit dashboards and business applications without exposing them to public cloud. Built-in authentication and monitoring included."
+      },
+      {
+        "title": "Automated Web Workflows",
+        "description": "Build crawlers and RPA bots that connect to government portals or sites requiring human CAPTCHA verification. Full remote desktop support for browser-based interactions."
+      }
+    ]
+  },
+  "workspaceMode": {
+    "badge": "Exclusive Feature",
+    "title": "Workspace Mode: One Config, Personal Spaces",
+    "subtitle": "A novel approach to multi-user deployments that gives every user their own isolated environment — without multiplying your configuration work.",
+    "description": "Define your application configuration once, and ChurroStack automatically creates an isolated Kubernetes deployment for each user who accesses it. The same URL intelligently routes to the right deployment based on the logged-in user. Perfect for VSCode instances, agentic development tools, or any app that benefits from personal workspaces. Each user can securely manage their own API keys — like a personal Claude subscription — without exposing credentials to administrators or other users.",
+    "features": [
+      "Isolated Kubernetes deployment per user",
+      "Single URL with smart routing",
+      "Secure API key management per user",
+      "Perfect for dev tools and AI workspaces"
+    ]
+  },
+  "llmHub": {
+    "badge": "AI Infrastructure",
+    "title": "Your Enterprise AI Hub",
+    "subtitle": "Centralize your organization's AI infrastructure with a single platform for hosting, routing, and managing LLM access.",
+    "description": "Host open-source models from HuggingFace on your own GPUs using vLLM, and expose them through an OpenAI-compatible API endpoint. The built-in router acts as a unified proxy — track usage per user and team, protect API keys from exposure, configure automatic fallback between LLM providers, and share access securely with internal teams or external clients using tools like ChatGPT, Claude, or Microsoft Copilot.",
+    "features": [
+      "Host any HuggingFace model with vLLM",
+      "OpenAI-compatible unified endpoint",
+      "Usage tracking and billing per user/team",
+      "Automatic fallback between LLM providers",
+      "Share with ChatGPT, Claude, Microsoft Copilot"
+    ]
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Plans that scale with your needs. Pay for the platform, not your compute.",
+    "monthly": "/month",
+    "askDemo": "Ask for a Demo",
+    "currentPlan": "Most Popular",
+    "enterprise": "Enterprise",
+    "custom": "Custom",
+    "startingAt": "Starting at",
+    "bandwidthNote": "Additional bandwidth: $0.10/GB",
+    "plans": [
+      {
+        "name": "Personal",
+        "price": "$15",
+        "description": "For individual developers and small projects",
+        "popular": false,
+        "features": [
+          "1 Environment",
+          "3 Services/Apps",
+          "5 GB Traffic",
+          "7-day Metrics & Logs",
+          "Community Support",
+          "No SLA",
+          "1 User",
+          "Shared Infrastructure"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$75",
+        "description": "For growing teams and production workloads",
+        "popular": true,
+        "features": [
+          "3 Environments",
+          "15 Services/Apps",
+          "25 GB Traffic",
+          "7-day Metrics & Logs",
+          "Email Support",
+          "SLA Level C",
+          "10 Users",
+          "Shared Infrastructure"
+        ]
+      },
+      {
+        "name": "Team",
+        "price": "$500",
+        "description": "For departments and multi-team organizations",
+        "popular": false,
+        "features": [
+          "10 Environments",
+          "100 Services/Apps",
+          "200 GB Traffic",
+          "7-day Metrics & Logs",
+          "Priority Email Support",
+          "SLA Level B",
+          "100 Users",
+          "1 Directory Sync",
+          "Shared Infrastructure"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$4,000",
+        "description": "For large organizations with dedicated needs",
+        "popular": false,
+        "features": [
+          "50+ Environments",
+          "1000+ Services/Apps",
+          "1 TB+ Traffic",
+          "90-day Metrics & Logs",
+          "PM + Phone Support",
+          "SLA Level A",
+          "Unlimited Users",
+          "1+ Directory Sync",
+          "Dedicated/Isolated Infrastructure",
+          "Custom Domain"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What hardware do I need?",
+        "answer": "Any Linux server that can run Kubernetes. It can be a powerful rack server, a mini PC, or even older hardware you have lying around. If it runs Linux, ChurroStack can work with it."
+      },
+      {
+        "question": "Does my server need a public IP address?",
+        "answer": "No. ChurroStack uses a reverse SSH tunnel to securely connect your server to the platform. This means it works behind NAT, corporate firewalls, and even home ISP connections — no public IP or VPN required."
+      },
+      {
+        "question": "What can I deploy on ChurroStack?",
+        "answer": "Virtually anything: Docker containers, Streamlit apps, source code from Git repositories, LLMs via vLLM, MCP tools, and even GUI applications with remote desktop support. If it runs in a container, it runs on ChurroStack."
+      },
+      {
+        "question": "How does Workspace Mode work?",
+        "answer": "You configure an application once, and ChurroStack creates a separate, isolated Kubernetes deployment for each user who accesses it. The same URL automatically routes to the correct deployment based on the logged-in user. This is ideal for tools like VSCode or AI development environments where each user needs their own instance."
+      },
+      {
+        "question": "Is ChurroStack really open source?",
+        "answer": "Yes. ChurroStack has an open-source core that you can inspect, modify, and contribute to. The managed control plane and premium features are available through our subscription plans."
+      },
+      {
+        "question": "How does LLM hosting work?",
+        "answer": "ChurroStack deploys vLLM on your GPUs and lets you load any model from HuggingFace. Once running, models are accessible through a standard OpenAI-compatible API, making integration with existing tools seamless."
+      },
+      {
+        "question": "What about security?",
+        "answer": "Security is built into every layer: mTLS encrypts all service-to-service communication, RBAC controls access at the user and team level, network policies isolate workloads, and OAuth/SSO integrates with your identity provider. All of this is enforced through Istio service mesh."
+      },
+      {
+        "question": "Can I use it for development environments?",
+        "answer": "Absolutely. Workspace Mode is specifically designed for this. Deploy VSCode Server, Jupyter notebooks, or any development tool and give each developer their own isolated workspace with persistent storage and secure API key management."
+      },
+      {
+        "question": "What's the LLM router?",
+        "answer": "The LLM router is an OpenAI-compatible proxy that sits in front of your models and third-party providers. It provides a single endpoint for all LLM requests, tracks usage per user and team, manages API keys securely, and automatically falls back to alternative providers if one is unavailable."
+      },
+      {
+        "question": "How does pricing work?",
+        "answer": "You pay a monthly subscription for the platform — not for compute. You bring your own hardware, so there are no per-CPU or per-GPU charges. Plans differ by the number of environments, services, users, and support level. Additional bandwidth beyond your plan's quota is billed at $0.10/GB."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get Started",
+    "title": "Ready to take control of your infrastructure?",
+    "subtitle": "Request a personalized demo and see how ChurroStack can transform the way your team deploys and manages applications.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Work Email",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Acme Inc.",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your infrastructure needs...",
+      "submit": "Request a Demo",
+      "success": "Thanks! We'll be in touch within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "brand": "ChurroStack",
+    "tagline": "Deploy on your own infrastructure. Simple as making churros.",
+    "sections": {
+      "product": {
+        "title": "Product",
+        "links": [
+          { "label": "Features", "href": "#features" },
+          { "label": "Pricing", "href": "#pricing" },
+          { "label": "Documentation", "href": "/docs" },
+          { "label": "Changelog", "href": "/changelog" }
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "links": [
+          { "label": "About", "href": "/about" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Careers", "href": "/careers" },
+          { "label": "Contact", "href": "#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          { "label": "Privacy Policy", "href": "/privacy" },
+          { "label": "Terms of Service", "href": "/terms" },
+          { "label": "Cookie Policy", "href": "/cookies" }
+        ]
+      }
+    },
+    "copyright": "© 2025 ChurroStack. All rights reserved.",
+    "madeWith": "Made with ❤️ for infrastructure teams"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "nav": {
+    "brand": "ChurroStack",
+    "features": "Características",
+    "howItWorks": "Cómo Funciona",
+    "useCases": "Casos de Uso",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "askDemo": "Solicitar Demo",
+    "toggleTheme": "Cambiar tema",
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "hero": {
+    "badge": "Plataforma de Infraestructura Open Source",
+    "title": "Tu Infraestructura.",
+    "titleHighlight": "Tus Reglas.",
+    "subtitle": "Despliega aplicaciones, LLMs y herramientas MCP en tu propio hardware — tan simple como hacer churros. Sin dependencia de proveedores, sin facturas sorpresa, control total sobre tus datos e infraestructura.",
+    "cta": "Solicitar Demo",
+    "ctaSecondary": "Ver en GitHub",
+    "screenshotAlt": "Panel de control de la plataforma ChurroStack mostrando servicios desplegados y resumen de infraestructura"
+  },
+  "logosBar": {
+    "title": "Diseñado para las herramientas que ya usas"
+  },
+  "features": {
+    "badge": "Características Principales",
+    "title": "Todo lo que necesitas para gestionar tu infraestructura",
+    "subtitle": "Una plataforma completa para desplegar, gestionar y proteger aplicaciones y cargas de trabajo de IA en tu propio hardware — sin la complejidad.",
+    "items": [
+      {
+        "title": "Hosting Privado",
+        "description": "Despliega en tus propios servidores. Tus datos nunca salen de tu red. La plataforma solo gestiona la comunicación segura a través de túneles SSH inversos."
+      },
+      {
+        "title": "Despliegues en Un Clic",
+        "description": "Despliega contenedores Docker, aplicaciones Streamlit o código fuente directamente desde Git. No se requiere experiencia en DevOps."
+      },
+      {
+        "title": "Hosting y Enrutamiento de LLMs",
+        "description": "Aloja modelos de HuggingFace con vLLM, o enruta solicitudes a través de un endpoint unificado compatible con OpenAI, con fallback y seguimiento de uso."
+      },
+      {
+        "title": "Modo Workspace",
+        "description": "Dale a cada usuario su propio despliegue aislado de cualquier aplicación — VSCode, herramientas de desarrollo o flujos de trabajo con agentes — todo desde una sola configuración."
+      },
+      {
+        "title": "Galería de MCP y LLMs",
+        "description": "Centraliza los recursos de IA de tu organización. Comparte modelos, herramientas MCP y claves API de forma segura con equipos y clientes externos."
+      },
+      {
+        "title": "Seguridad Empresarial",
+        "description": "RBAC, OAuth/SSO, mTLS, políticas de red y aislamiento de recursos integrados. Cada despliegue está protegido por defecto con Istio."
+      },
+      {
+        "title": "Gestión de Entornos",
+        "description": "Divide tu infraestructura en entornos para equipos, departamentos o etapas (DEV/QA/PROD) con cuotas de recursos dedicadas."
+      },
+      {
+        "title": "Escritorio Remoto",
+        "description": "Ejecuta aplicaciones con interfaz gráfica como crawlers de Playwright o herramientas basadas en navegador con soporte completo de escritorio remoto vía x11-vnc."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Cómo Funciona",
+    "title": "De hardware físico a producción en minutos",
+    "subtitle": "Tres simples pasos para convertir cualquier servidor en una plataforma de despliegue completamente gestionada.",
+    "steps": [
+      {
+        "title": "Conecta Tu Hardware",
+        "description": "Instala el agente de ChurroStack en cualquier servidor (incluso detrás de NAT o redes domésticas). Un túnel SSH inverso lo conecta de forma segura a la plataforma — sin necesidad de IP pública ni VPN."
+      },
+      {
+        "title": "Configura Entornos",
+        "description": "Divide tu servidor en entornos usando namespaces de Kubernetes. Establece cuotas de CPU, memoria y GPU. Asigna equipos y usuarios con RBAC granular."
+      },
+      {
+        "title": "Despliega y Gestiona",
+        "description": "Lanza aplicaciones, LLMs o herramientas MCP a través de un sencillo asistente en el navegador. La plataforma se encarga del despliegue, monitoreo, logs, autenticación y escalado."
+      }
+    ],
+    "diagramAlt": "Diagrama de arquitectura mostrando el plano de control de ChurroStack conectado a infraestructura privada a través de túneles inversos seguros",
+    "diagramCaption": "ChurroStack conecta tu infraestructura privada a un plano de control gestionado a través de túneles inversos seguros"
+  },
+  "useCases": {
+    "badge": "Casos de Uso",
+    "title": "Diseñado para escenarios reales",
+    "subtitle": "Desde infraestructura de IA hasta herramientas internas, ChurroStack se adapta a cómo realmente trabaja tu organización.",
+    "items": [
+      {
+        "title": "IA con GPUs",
+        "description": "¿Tienes NVIDIA H100s acumulando polvo? Despliega modelos vLLM, encoders, rerankers y analizadores de documentos con IA como Docling — sin el dolor de cabeza de Kubernetes."
+      },
+      {
+        "title": "Hardware Distribuido del Equipo",
+        "description": "Convierte el hardware disponible en las casas u oficinas de tu equipo en una plataforma de despliegue unificada. Incluso máquinas detrás de NAT de ISP funcionan perfectamente."
+      },
+      {
+        "title": "Aplicaciones Empresariales Seguras",
+        "description": "Despliega dashboards internos de Streamlit y aplicaciones de negocio sin exponerlas a la nube pública. Autenticación y monitoreo integrados incluidos."
+      },
+      {
+        "title": "Flujos Web Automatizados",
+        "description": "Construye crawlers y bots RPA que se conectan a portales gubernamentales o sitios que requieren verificación CAPTCHA humana. Soporte completo de escritorio remoto para interacciones basadas en navegador."
+      }
+    ]
+  },
+  "workspaceMode": {
+    "badge": "Característica Exclusiva",
+    "title": "Modo Workspace: Una Configuración, Espacios Personales",
+    "subtitle": "Un enfoque innovador para despliegues multiusuario que le da a cada usuario su propio entorno aislado — sin multiplicar tu trabajo de configuración.",
+    "description": "Define la configuración de tu aplicación una sola vez, y ChurroStack crea automáticamente un despliegue aislado en Kubernetes para cada usuario que accede. La misma URL enruta inteligentemente al despliegue correcto según el usuario autenticado. Perfecto para instancias de VSCode, herramientas de desarrollo con agentes, o cualquier aplicación que se beneficie de espacios de trabajo personales. Cada usuario puede gestionar sus propias claves API de forma segura — como una suscripción personal de Claude — sin exponer credenciales a administradores u otros usuarios.",
+    "features": [
+      "Despliegue aislado en Kubernetes por usuario",
+      "URL única con enrutamiento inteligente",
+      "Gestión segura de claves API por usuario",
+      "Perfecto para herramientas de desarrollo y espacios de trabajo IA"
+    ]
+  },
+  "llmHub": {
+    "badge": "Infraestructura IA",
+    "title": "Tu Hub de IA Empresarial",
+    "subtitle": "Centraliza la infraestructura de IA de tu organización con una sola plataforma para alojar, enrutar y gestionar el acceso a LLMs.",
+    "description": "Aloja modelos open-source de HuggingFace en tus propias GPUs usando vLLM, y expónlos a través de un endpoint API compatible con OpenAI. El router integrado actúa como un proxy unificado — rastrea el uso por usuario y equipo, protege las claves API, configura fallback automático entre proveedores de LLM, y comparte el acceso de forma segura con equipos internos o clientes externos usando herramientas como ChatGPT, Claude o Microsoft Copilot.",
+    "features": [
+      "Aloja cualquier modelo de HuggingFace con vLLM",
+      "Endpoint unificado compatible con OpenAI",
+      "Seguimiento de uso y facturación por usuario/equipo",
+      "Fallback automático entre proveedores de LLM",
+      "Compatible con ChatGPT, Claude, Microsoft Copilot"
+    ]
+  },
+  "pricing": {
+    "badge": "Precios",
+    "title": "Precios simples y transparentes",
+    "subtitle": "Planes que escalan con tus necesidades. Paga por la plataforma, no por tu cómputo.",
+    "monthly": "/mes",
+    "askDemo": "Solicitar Demo",
+    "currentPlan": "Más Popular",
+    "enterprise": "Enterprise",
+    "custom": "Personalizado",
+    "startingAt": "Desde",
+    "bandwidthNote": "Ancho de banda adicional: $0,10/GB",
+    "plans": [
+      {
+        "name": "Personal",
+        "price": "$15",
+        "description": "Para desarrolladores individuales y proyectos pequeños",
+        "popular": false,
+        "features": [
+          "1 Entorno",
+          "3 Servicios/Apps",
+          "5 GB de Tráfico",
+          "Métricas y Logs de 7 días",
+          "Soporte Comunitario",
+          "Sin SLA",
+          "1 Usuario",
+          "Infraestructura Compartida"
+        ]
+      },
+      {
+        "name": "Profesional",
+        "price": "$75",
+        "description": "Para equipos en crecimiento y cargas de producción",
+        "popular": true,
+        "features": [
+          "3 Entornos",
+          "15 Servicios/Apps",
+          "25 GB de Tráfico",
+          "Métricas y Logs de 7 días",
+          "Soporte por Email",
+          "SLA Nivel C",
+          "10 Usuarios",
+          "Infraestructura Compartida"
+        ]
+      },
+      {
+        "name": "Equipo",
+        "price": "$500",
+        "description": "Para departamentos y organizaciones con múltiples equipos",
+        "popular": false,
+        "features": [
+          "10 Entornos",
+          "100 Servicios/Apps",
+          "200 GB de Tráfico",
+          "Métricas y Logs de 7 días",
+          "Soporte Prioritario por Email",
+          "SLA Nivel B",
+          "100 Usuarios",
+          "1 Sincronización de Directorio",
+          "Infraestructura Compartida"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$4.000",
+        "description": "Para grandes organizaciones con necesidades dedicadas",
+        "popular": false,
+        "features": [
+          "50+ Entornos",
+          "1000+ Servicios/Apps",
+          "1 TB+ de Tráfico",
+          "Métricas y Logs de 90 días",
+          "PM + Soporte Telefónico",
+          "SLA Nivel A",
+          "Usuarios Ilimitados",
+          "1+ Sincronización de Directorio",
+          "Infraestructura Dedicada/Aislada",
+          "Dominio Personalizado"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Qué hardware necesito?",
+        "answer": "Cualquier servidor Linux que pueda ejecutar Kubernetes. Puede ser un servidor de rack potente, un mini PC, o incluso hardware antiguo que tengas disponible. Si ejecuta Linux, ChurroStack puede funcionar con él."
+      },
+      {
+        "question": "¿Mi servidor necesita una IP pública?",
+        "answer": "No. ChurroStack usa un túnel SSH inverso para conectar tu servidor de forma segura a la plataforma. Esto significa que funciona detrás de NAT, firewalls corporativos e incluso conexiones domésticas de ISP — sin necesidad de IP pública ni VPN."
+      },
+      {
+        "question": "¿Qué puedo desplegar en ChurroStack?",
+        "answer": "Prácticamente cualquier cosa: contenedores Docker, aplicaciones Streamlit, código fuente desde repositorios Git, LLMs vía vLLM, herramientas MCP e incluso aplicaciones con interfaz gráfica con soporte de escritorio remoto. Si corre en un contenedor, corre en ChurroStack."
+      },
+      {
+        "question": "¿Cómo funciona el Modo Workspace?",
+        "answer": "Configuras una aplicación una sola vez, y ChurroStack crea un despliegue separado y aislado en Kubernetes para cada usuario que accede. La misma URL enruta automáticamente al despliegue correcto según el usuario autenticado. Es ideal para herramientas como VSCode o entornos de desarrollo con IA donde cada usuario necesita su propia instancia."
+      },
+      {
+        "question": "¿ChurroStack es realmente open source?",
+        "answer": "Sí. ChurroStack tiene un núcleo open-source que puedes inspeccionar, modificar y al que puedes contribuir. El plano de control gestionado y las funcionalidades premium están disponibles a través de nuestros planes de suscripción."
+      },
+      {
+        "question": "¿Cómo funciona el hosting de LLMs?",
+        "answer": "ChurroStack despliega vLLM en tus GPUs y te permite cargar cualquier modelo de HuggingFace. Una vez en ejecución, los modelos son accesibles a través de una API estándar compatible con OpenAI, haciendo la integración con herramientas existentes completamente transparente."
+      },
+      {
+        "question": "¿Qué hay de la seguridad?",
+        "answer": "La seguridad está integrada en cada capa: mTLS encripta toda la comunicación entre servicios, RBAC controla el acceso a nivel de usuario y equipo, las políticas de red aíslan las cargas de trabajo, y OAuth/SSO se integra con tu proveedor de identidad. Todo esto se aplica a través del service mesh Istio."
+      },
+      {
+        "question": "¿Puedo usarlo para entornos de desarrollo?",
+        "answer": "Por supuesto. El Modo Workspace está diseñado específicamente para esto. Despliega VSCode Server, notebooks Jupyter o cualquier herramienta de desarrollo y dale a cada desarrollador su propio espacio de trabajo aislado con almacenamiento persistente y gestión segura de claves API."
+      },
+      {
+        "question": "¿Qué es el router de LLMs?",
+        "answer": "El router de LLMs es un proxy compatible con OpenAI que se ubica frente a tus modelos y proveedores externos. Proporciona un único endpoint para todas las solicitudes a LLMs, rastrea el uso por usuario y equipo, gestiona claves API de forma segura, y automáticamente redirige a proveedores alternativos si uno no está disponible."
+      },
+      {
+        "question": "¿Cómo funcionan los precios?",
+        "answer": "Pagas una suscripción mensual por la plataforma — no por cómputo. Tú pones tu propio hardware, así que no hay cargos por CPU o GPU. Los planes difieren en la cantidad de entornos, servicios, usuarios y nivel de soporte. El ancho de banda adicional más allá de la cuota de tu plan se factura a $0,10/GB."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Comienza Ahora",
+    "title": "¿Listo para tomar el control de tu infraestructura?",
+    "subtitle": "Solicita una demo personalizada y descubre cómo ChurroStack puede transformar la forma en que tu equipo despliega y gestiona aplicaciones.",
+    "form": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Email Corporativo",
+      "emailPlaceholder": "juan@empresa.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Acme S.A.",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tus necesidades de infraestructura...",
+      "submit": "Solicitar Demo",
+      "success": "¡Gracias! Te contactaremos en las próximas 24 horas.",
+      "error": "Algo salió mal. Por favor, inténtalo de nuevo."
+    }
+  },
+  "footer": {
+    "brand": "ChurroStack",
+    "tagline": "Despliega en tu propia infraestructura. Simple como hacer churros.",
+    "sections": {
+      "product": {
+        "title": "Producto",
+        "links": [
+          { "label": "Características", "href": "#features" },
+          { "label": "Precios", "href": "#pricing" },
+          { "label": "Documentación", "href": "/docs" },
+          { "label": "Changelog", "href": "/changelog" }
+        ]
+      },
+      "company": {
+        "title": "Empresa",
+        "links": [
+          { "label": "Acerca de", "href": "/about" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Carreras", "href": "/careers" },
+          { "label": "Contacto", "href": "#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          { "label": "Política de Privacidad", "href": "/privacy" },
+          { "label": "Términos de Servicio", "href": "/terms" },
+          { "label": "Política de Cookies", "href": "/cookies" }
+        ]
+      }
+    },
+    "copyright": "© 2025 ChurroStack. Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ para equipos de infraestructura"
+  }
+}
