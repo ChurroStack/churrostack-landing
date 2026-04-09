@@ -1,0 +1,463 @@
+{
+  "nav": {
+    "brand": "ChurroStack",
+    "features": "Características",
+    "howItWorks": "Cómo Funciona",
+    "useCases": "Casos de Uso",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "askDemo": "Solicitar Demo",
+    "toggleTheme": "Cambiar tema",
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "hero": {
+    "badge": "Plataforma de Infraestructura Open Source",
+    "title": "Tu Infraestructura.",
+    "titleHighlight": "Tus Reglas.",
+    "subtitle": "Despliega aplicaciones, LLMs y herramientas MCP en tu propio hardware — tan simple como hacer churros. Sin dependencia de proveedores, sin facturas sorpresa, control total sobre tus datos e infraestructura.",
+    "cta": "Solicitar Demo",
+    "ctaSecondary": "Ver en GitHub",
+    "screenshotAlt": "Panel de control de la plataforma ChurroStack mostrando servicios desplegados y resumen de infraestructura"
+  },
+  "logosBar": {
+    "title": "Diseñado para las herramientas que ya usas"
+  },
+  "features": {
+    "badge": "Características Principales",
+    "title": "Todo lo que necesitas para gestionar tu infraestructura",
+    "subtitle": "Una plataforma completa para desplegar, gestionar y proteger aplicaciones y cargas de trabajo de IA en tu propio hardware — sin la complejidad.",
+    "items": [
+      {
+        "title": "Hosting Privado",
+        "description": "Despliega en tus propios servidores. Tus datos nunca salen de tu red. La plataforma solo gestiona la comunicación segura a través de túneles SSH inversos."
+      },
+      {
+        "title": "Despliegues en Un Clic",
+        "description": "Despliega contenedores Docker, aplicaciones Streamlit o código fuente directamente desde Git. No se requiere experiencia en DevOps."
+      },
+      {
+        "title": "Hosting y Enrutamiento de LLMs",
+        "description": "Aloja modelos de HuggingFace con vLLM, o enruta solicitudes a través de un endpoint unificado compatible con OpenAI, con fallback y seguimiento de uso."
+      },
+      {
+        "title": "Modo Workspace",
+        "description": "Dale a cada usuario su propio despliegue aislado de cualquier aplicación — VSCode, herramientas de desarrollo o flujos de trabajo con agentes — todo desde una sola configuración."
+      },
+      {
+        "title": "Galería de MCP y LLMs",
+        "description": "Centraliza los recursos de IA de tu organización. Comparte modelos, herramientas MCP y claves API de forma segura con equipos y clientes externos."
+      },
+      {
+        "title": "Seguridad Empresarial",
+        "description": "RBAC, OAuth/SSO, mTLS, políticas de red y aislamiento de recursos integrados. Cada despliegue está protegido por defecto con Istio."
+      },
+      {
+        "title": "Gestión de Entornos",
+        "description": "Divide tu infraestructura en entornos para equipos, departamentos o etapas (DEV/QA/PROD) con cuotas de recursos dedicadas."
+      },
+      {
+        "title": "Escritorio Remoto",
+        "description": "Ejecuta aplicaciones con interfaz gráfica como crawlers de Playwright o herramientas basadas en navegador con soporte completo de escritorio remoto vía x11-vnc."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Cómo Funciona",
+    "title": "De hardware físico a producción en minutos",
+    "subtitle": "Tres simples pasos para convertir cualquier servidor en una plataforma de despliegue completamente gestionada.",
+    "steps": [
+      {
+        "title": "Conecta Tu Hardware",
+        "description": "Instala el agente de ChurroStack en cualquier servidor (incluso detrás de NAT o redes domésticas). Un túnel SSH inverso lo conecta de forma segura a la plataforma — sin necesidad de IP pública ni VPN."
+      },
+      {
+        "title": "Configura Entornos",
+        "description": "Divide tu servidor en entornos usando namespaces de Kubernetes. Establece cuotas de CPU, memoria y GPU. Asigna equipos y usuarios con RBAC granular."
+      },
+      {
+        "title": "Despliega y Gestiona",
+        "description": "Lanza aplicaciones, LLMs o herramientas MCP a través de un sencillo asistente en el navegador. La plataforma se encarga del despliegue, monitoreo, logs, autenticación y escalado."
+      }
+    ],
+    "diagramAlt": "Diagrama de arquitectura mostrando el plano de control de ChurroStack conectado a infraestructura privada a través de túneles inversos seguros",
+    "diagramCaption": "ChurroStack conecta tu infraestructura privada a un plano de control gestionado a través de túneles inversos seguros"
+  },
+  "useCases": {
+    "badge": "Casos de Uso",
+    "title": "Diseñado para escenarios reales",
+    "subtitle": "Desde infraestructura de IA hasta herramientas internas, ChurroStack se adapta a cómo realmente trabaja tu organización.",
+    "items": [
+      {
+        "title": "IA con GPUs",
+        "description": "¿Tienes NVIDIA H100s acumulando polvo? Despliega modelos vLLM, encoders, rerankers y analizadores de documentos con IA como Docling — sin el dolor de cabeza de Kubernetes."
+      },
+      {
+        "title": "Hardware Distribuido del Equipo",
+        "description": "Convierte el hardware disponible en las casas u oficinas de tu equipo en una plataforma de despliegue unificada. Incluso máquinas detrás de NAT de ISP funcionan perfectamente."
+      },
+      {
+        "title": "Aplicaciones Empresariales Seguras",
+        "description": "Despliega dashboards internos de Streamlit y aplicaciones de negocio sin exponerlas a la nube pública. Autenticación y monitoreo integrados incluidos."
+      },
+      {
+        "title": "Flujos Web Automatizados",
+        "description": "Construye crawlers y bots RPA que se conectan a portales gubernamentales o sitios que requieren verificación CAPTCHA humana. Soporte completo de escritorio remoto para interacciones basadas en navegador."
+      }
+    ]
+  },
+  "workspaceMode": {
+    "badge": "Característica Exclusiva",
+    "title": "Modo Workspace: Una Configuración, Espacios Personales",
+    "subtitle": "Un enfoque innovador para despliegues multiusuario que le da a cada usuario su propio entorno aislado — sin multiplicar tu trabajo de configuración.",
+    "description": "Define la configuración de tu aplicación una sola vez, y ChurroStack crea automáticamente un despliegue aislado en Kubernetes para cada usuario que accede. La misma URL enruta inteligentemente al despliegue correcto según el usuario autenticado. Perfecto para instancias de VSCode, herramientas de desarrollo con agentes, o cualquier aplicación que se beneficie de espacios de trabajo personales. Cada usuario puede gestionar sus propias claves API de forma segura — como una suscripción personal de Claude — sin exponer credenciales a administradores u otros usuarios.",
+    "features": [
+      "Despliegue aislado en Kubernetes por usuario",
+      "URL única con enrutamiento inteligente",
+      "Gestión segura de claves API por usuario",
+      "Perfecto para herramientas de desarrollo y espacios de trabajo IA"
+    ]
+  },
+  "llmHub": {
+    "badge": "Infraestructura IA",
+    "title": "Tu Hub de IA Empresarial",
+    "subtitle": "Centraliza la infraestructura de IA de tu organización con una sola plataforma para alojar, enrutar y gestionar el acceso a LLMs.",
+    "description": "Aloja modelos open-source de HuggingFace en tus propias GPUs usando vLLM, y expónlos a través de un endpoint API compatible con OpenAI. El router integrado actúa como un proxy unificado — rastrea el uso por usuario y equipo, protege las claves API, configura fallback automático entre proveedores de LLM, y comparte el acceso de forma segura con equipos internos o clientes externos usando herramientas como ChatGPT, Claude o Microsoft Copilot.",
+    "features": [
+      "Aloja cualquier modelo de HuggingFace con vLLM",
+      "Endpoint unificado compatible con OpenAI",
+      "Seguimiento de uso y facturación por usuario/equipo",
+      "Fallback automático entre proveedores de LLM",
+      "Compatible con ChatGPT, Claude, Microsoft Copilot"
+    ]
+  },
+  "pricing": {
+    "badge": "Precios",
+    "title": "Precios simples y transparentes",
+    "subtitle": "Planes que escalan con tus necesidades. Paga por la plataforma, no por tu cómputo.",
+    "monthly": "/mes",
+    "askDemo": "Solicitar Demo",
+    "currentPlan": "Más Popular",
+    "enterprise": "Enterprise",
+    "custom": "Personalizado",
+    "startingAt": "Desde",
+    "bandwidthNote": "Ancho de banda adicional: $0,10/GB",
+    "plans": [
+      {
+        "name": "Personal",
+        "price": "$15",
+        "description": "Para desarrolladores individuales y proyectos pequeños",
+        "popular": false,
+        "features": [
+          "1 Entorno",
+          "3 Servicios/Apps",
+          "5 GB de Tráfico",
+          "Métricas y Logs de 7 días",
+          "Soporte Comunitario",
+          "Sin SLA",
+          "1 Usuario",
+          "Infraestructura Compartida"
+        ]
+      },
+      {
+        "name": "Profesional",
+        "price": "$75",
+        "description": "Para equipos en crecimiento y cargas de producción",
+        "popular": true,
+        "features": [
+          "3 Entornos",
+          "15 Servicios/Apps",
+          "25 GB de Tráfico",
+          "Métricas y Logs de 7 días",
+          "Soporte por Email",
+          "SLA Nivel C",
+          "10 Usuarios",
+          "Infraestructura Compartida"
+        ]
+      },
+      {
+        "name": "Equipo",
+        "price": "$500",
+        "description": "Para departamentos y organizaciones con múltiples equipos",
+        "popular": false,
+        "features": [
+          "10 Entornos",
+          "100 Servicios/Apps",
+          "200 GB de Tráfico",
+          "Métricas y Logs de 7 días",
+          "Soporte Prioritario por Email",
+          "SLA Nivel B",
+          "100 Usuarios",
+          "1 Sincronización de Directorio",
+          "Infraestructura Compartida"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$4.000",
+        "startingAt": true,
+        "description": "Para grandes organizaciones — escala con tus necesidades",
+        "popular": false,
+        "features": [
+          "50+ Entornos",
+          "1000+ Servicios/Apps",
+          "1 TB+ de Tráfico",
+          "Métricas y Logs de 90 días",
+          "PM + Soporte Telefónico",
+          "SLA Nivel A",
+          "Usuarios Ilimitados",
+          "1+ Sincronización de Directorio",
+          "Infraestructura Dedicada/Aislada",
+          "Dominio Personalizado"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Qué hardware necesito?",
+        "answer": "Cualquier servidor Linux que pueda ejecutar Kubernetes. Puede ser un servidor de rack potente, un mini PC, o incluso hardware antiguo que tengas disponible. Si ejecuta Linux, ChurroStack puede funcionar con él."
+      },
+      {
+        "question": "¿Mi servidor necesita una IP pública?",
+        "answer": "No. ChurroStack usa un túnel SSH inverso para conectar tu servidor de forma segura a la plataforma. Esto significa que funciona detrás de NAT, firewalls corporativos e incluso conexiones domésticas de ISP — sin necesidad de IP pública ni VPN."
+      },
+      {
+        "question": "¿Qué puedo desplegar en ChurroStack?",
+        "answer": "Prácticamente cualquier cosa: contenedores Docker, aplicaciones Streamlit, código fuente desde repositorios Git, LLMs vía vLLM, herramientas MCP e incluso aplicaciones con interfaz gráfica con soporte de escritorio remoto. Si corre en un contenedor, corre en ChurroStack."
+      },
+      {
+        "question": "¿Cómo funciona el Modo Workspace?",
+        "answer": "Configuras una aplicación una sola vez, y ChurroStack crea un despliegue separado y aislado en Kubernetes para cada usuario que accede. La misma URL enruta automáticamente al despliegue correcto según el usuario autenticado. Es ideal para herramientas como VSCode o entornos de desarrollo con IA donde cada usuario necesita su propia instancia."
+      },
+      {
+        "question": "¿ChurroStack es realmente open source?",
+        "answer": "Sí. ChurroStack tiene un núcleo open-source que puedes inspeccionar, modificar y al que puedes contribuir. El plano de control gestionado y las funcionalidades premium están disponibles a través de nuestros planes de suscripción."
+      },
+      {
+        "question": "¿Cómo funciona el hosting de LLMs?",
+        "answer": "ChurroStack despliega vLLM en tus GPUs y te permite cargar cualquier modelo de HuggingFace. Una vez en ejecución, los modelos son accesibles a través de una API estándar compatible con OpenAI, haciendo la integración con herramientas existentes completamente transparente."
+      },
+      {
+        "question": "¿Qué hay de la seguridad?",
+        "answer": "La seguridad está integrada en cada capa: mTLS encripta toda la comunicación entre servicios, RBAC controla el acceso a nivel de usuario y equipo, las políticas de red aíslan las cargas de trabajo, y OAuth/SSO se integra con tu proveedor de identidad. Todo esto se aplica a través del service mesh Istio."
+      },
+      {
+        "question": "¿Puedo usarlo para entornos de desarrollo?",
+        "answer": "Por supuesto. El Modo Workspace está diseñado específicamente para esto. Despliega VSCode Server, notebooks Jupyter o cualquier herramienta de desarrollo y dale a cada desarrollador su propio espacio de trabajo aislado con almacenamiento persistente y gestión segura de claves API."
+      },
+      {
+        "question": "¿Qué es el router de LLMs?",
+        "answer": "El router de LLMs es un proxy compatible con OpenAI que se ubica frente a tus modelos y proveedores externos. Proporciona un único endpoint para todas las solicitudes a LLMs, rastrea el uso por usuario y equipo, gestiona claves API de forma segura, y automáticamente redirige a proveedores alternativos si uno no está disponible."
+      },
+      {
+        "question": "¿Cómo funcionan los precios?",
+        "answer": "Pagas una suscripción mensual por la plataforma — no por cómputo. Tú pones tu propio hardware, así que no hay cargos por CPU o GPU. Los planes difieren en la cantidad de entornos, servicios, usuarios y nivel de soporte. El ancho de banda adicional más allá de la cuota de tu plan se factura a $0,10/GB."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Comienza Ahora",
+    "title": "¿Listo para tomar el control de tu infraestructura?",
+    "subtitle": "Solicita una demo personalizada y descubre cómo ChurroStack puede transformar la forma en que tu equipo despliega y gestiona aplicaciones.",
+    "form": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Email Corporativo",
+      "emailPlaceholder": "juan@empresa.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Acme S.A.",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tus necesidades de infraestructura...",
+      "submit": "Solicitar Demo",
+      "success": "¡Gracias! Te contactaremos en las próximas 24 horas.",
+      "error": "Algo salió mal. Por favor, inténtalo de nuevo."
+    }
+  },
+  "footer": {
+    "brand": "ChurroStack",
+    "tagline": "Despliega en tu propia infraestructura. Simple como hacer churros.",
+    "sections": {
+      "product": {
+        "title": "Producto",
+        "links": [
+          { "label": "Características", "href": "#features" },
+          { "label": "Precios", "href": "#pricing" },
+          { "label": "Documentación", "href": "/docs" }
+        ]
+      },
+      "company": {
+        "title": "Empresa",
+        "links": [
+          { "label": "Acerca de", "href": "https://www.iberant.es" },
+          { "label": "Carreras", "href": "https://www.iberant.es" },
+          { "label": "Contacto", "href": "#contact" }
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": [
+          { "label": "Política de Privacidad", "href": "/privacy" },
+          { "label": "Términos de Servicio", "href": "/terms" },
+          { "label": "Política de Cookies", "href": "/cookies" }
+        ]
+      }
+    },
+    "compliance": [
+      "Hospedada en centros de datos certificados ISO 27001, SOC 2 y ENS",
+      "Datos almacenados en la UE (región West Europe)",
+      "Cifrado en tránsito y en reposo con estándares de Microsoft Azure"
+    ],
+    "copyright": "© 2025 ChurroStack. Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ para equipos de infraestructura"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 9 de abril de 2026",
+    "sections": [
+      {
+        "title": "1. Responsable del Tratamiento",
+        "content": "El responsable del tratamiento de sus datos personales es:\n\nIBERANT SOLUTIONS S.L.\nCIF: ESB87402616\nPaseo de la Castellana, 95, Piso 29, Torre Europa\n28046 Madrid, España\nEmail: info@iberant.com\nTeléfono: (+34) 620 219 379\n\nInscrita en el Registro Mercantil de Madrid."
+      },
+      {
+        "title": "2. Datos que Recopilamos",
+        "content": "Recopilamos y tratamos las siguientes categorías de datos personales:\n\n• Datos identificativos: nombre completo, nombre de la empresa, cargo.\n• Datos de contacto: dirección de correo electrónico, número de teléfono.\n• Datos técnicos: dirección IP, tipo y versión del navegador, sistema operativo, zona horaria, identificadores de dispositivo.\n• Datos de uso: páginas visitadas, funcionalidades utilizadas, duración de la sesión, registros de errores.\n• Datos de cuenta: credenciales de acceso (las contraseñas se almacenan cifradas con hash y sal, nunca en texto plano), plan de suscripción, historial de facturación.\n• Datos de comunicación: mensajes enviados a través del formulario de contacto o canales de soporte.\n\nNo recopilamos categorías especiales de datos personales (por ejemplo, origen racial o étnico, opiniones políticas, datos de salud) salvo que sea estrictamente necesario y cuente con su consentimiento explícito."
+      },
+      {
+        "title": "3. Finalidades y Base Jurídica del Tratamiento",
+        "content": "Tratamos sus datos personales con las siguientes finalidades y bajo las bases jurídicas correspondientes establecidas por el Artículo 6 del RGPD:\n\n• Ejecución del contrato (Art. 6.1.b): Para proporcionar y mantener la plataforma ChurroStack, gestionar su cuenta, procesar pagos y prestar soporte.\n• Interés legítimo (Art. 6.1.f): Para mejorar nuestros servicios, detectar y prevenir fraude, garantizar la seguridad de la plataforma y realizar análisis sobre el uso del servicio.\n• Consentimiento (Art. 6.1.a): Para enviar comunicaciones comerciales, boletines informativos y actualizaciones de producto. Puede retirar su consentimiento en cualquier momento.\n• Obligación legal (Art. 6.1.c): Para cumplir con las obligaciones fiscales, contables y regulatorias bajo la legislación española y de la UE."
+      },
+      {
+        "title": "4. Cesión de Datos y Terceros",
+        "content": "Podemos compartir sus datos personales con las siguientes categorías de destinatarios:\n\n• Proveedores de infraestructura en la nube: Microsoft Azure (región West Europe de la UE) para alojamiento y almacenamiento de datos.\n• Procesadores de pagos: Para la facturación de suscripciones y el procesamiento de pagos.\n• Servicios de analítica: Para comprender el uso del servicio y mejorar la plataforma.\n• Asesores profesionales: Proveedores de servicios legales, contables y de auditoría según sea necesario.\n• Autoridades: Cuando lo requiera la ley aplicable, una orden judicial o una regulación gubernamental.\n\nTodos los encargados del tratamiento están vinculados por contratos de encargo del tratamiento que garantizan el manejo de datos conforme al RGPD. Exigimos a todos los encargados que respeten la seguridad de sus datos personales y los traten conforme a la legislación aplicable."
+      },
+      {
+        "title": "5. Transferencias Internacionales de Datos",
+        "content": "Sus datos personales se almacenan y procesan dentro del Espacio Económico Europeo (EEE), concretamente en la región West Europe de Microsoft Azure.\n\nNo realizamos transferencias de datos personales fuera del EEE. En caso de que una transferencia fuera del EEE resultara necesaria en el futuro, garantizaremos que se apliquen las salvaguardas adecuadas, tales como Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea, o una decisión de adecuación conforme al Artículo 45 del RGPD."
+      },
+      {
+        "title": "6. Conservación de Datos",
+        "content": "Conservamos sus datos personales únicamente durante el tiempo necesario para cumplir las finalidades para las que fueron recogidos:\n\n• Datos de cuenta: Durante la vigencia de su cuenta y hasta 5 años después del cierre, según lo exigido por la legislación mercantil y tributaria española (Código de Comercio y Ley General Tributaria).\n• Datos de facturación y transacciones: 5 años desde la fecha de cada transacción, según lo exigido por la normativa fiscal española.\n• Datos de uso y analítica: Hasta 24 meses desde su recogida, después se anonimizan o eliminan.\n• Consultas del formulario de contacto: Hasta 12 meses desde la fecha de su última comunicación, salvo que se establezca una relación contractual.\n• Registros de consentimiento para comunicaciones comerciales: Mientras el consentimiento esté activo, más 3 años tras su retirada por motivos de responsabilidad.\n\nCuando los datos ya no sean necesarios, se eliminarán de forma segura o se anonimizarán de manera irreversible."
+      },
+      {
+        "title": "7. Sus Derechos según el RGPD",
+        "content": "En virtud del Reglamento General de Protección de Datos (UE) 2016/679, usted tiene los siguientes derechos:\n\n• Derecho de acceso (Art. 15): Obtener confirmación de si tratamos sus datos y solicitar una copia.\n• Derecho de rectificación (Art. 16): Solicitar la corrección de datos inexactos o incompletos.\n• Derecho de supresión (Art. 17): Solicitar la eliminación de sus datos cuando ya no sean necesarios, retire su consentimiento o el tratamiento sea ilícito.\n• Derecho a la limitación del tratamiento (Art. 18): Solicitar que limitemos el tratamiento en determinadas circunstancias.\n• Derecho a la portabilidad (Art. 20): Recibir sus datos en un formato estructurado, de uso común y lectura mecánica, y transmitirlos a otro responsable.\n• Derecho de oposición (Art. 21): Oponerse al tratamiento basado en interés legítimo o en marketing directo en cualquier momento.\n• Derecho a no ser objeto de decisiones automatizadas (Art. 22): No ser objeto de decisiones basadas únicamente en el tratamiento automatizado que produzcan efectos jurídicos o significativos.\n• Derecho a retirar el consentimiento: Cuando el tratamiento se base en el consentimiento, puede retirarlo en cualquier momento sin que ello afecte a la licitud del tratamiento previo."
+      },
+      {
+        "title": "8. Ejercicio de Sus Derechos",
+        "content": "Para ejercer cualquiera de los derechos mencionados, puede contactarnos en:\n\nEmail: info@iberant.com\nDirección postal: IBERANT SOLUTIONS S.L., Paseo de la Castellana, 95, Piso 29, Torre Europa, 28046 Madrid, España\n\nPor favor, incluya información suficiente para identificarse (nombre completo y email asociado a su cuenta). Responderemos a su solicitud en el plazo de un mes, conforme al RGPD. Este plazo podrá ampliarse dos meses adicionales en caso de solicitudes complejas, en cuyo caso le informaremos de la ampliación y los motivos.\n\nEl ejercicio de sus derechos es gratuito. No obstante, podremos cobrar una tasa razonable en caso de solicitudes manifiestamente infundadas o excesivas."
+      },
+      {
+        "title": "9. Cookies",
+        "content": "Nuestro sitio web utiliza cookies y tecnologías de seguimiento similares. Para obtener información detallada sobre las cookies que utilizamos, sus finalidades y cómo gestionar sus preferencias, consulte nuestra Política de Cookies."
+      },
+      {
+        "title": "10. Medidas de Seguridad",
+        "content": "Implementamos medidas de seguridad técnicas y organizativas adecuadas para proteger sus datos personales contra el acceso no autorizado, la alteración, la divulgación o la destrucción. Estas medidas incluyen:\n\n• Cifrado en tránsito (TLS/HTTPS) y en reposo siguiendo los estándares de Microsoft Azure.\n• Controles de acceso con permisos basados en roles y autenticación multifactor para el acceso administrativo.\n• Evaluaciones de seguridad periódicas y pruebas de vulnerabilidad.\n• Alojamiento en centros de datos certificados bajo ISO 27001, SOC 2 y el Esquema Nacional de Seguridad (ENS).\n• Procedimientos de respuesta a incidentes en cumplimiento del requisito de notificación de brechas del RGPD en 72 horas."
+      },
+      {
+        "title": "11. Cambios en Esta Política",
+        "content": "Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas, requisitos legales o servicios. Cuando realicemos cambios sustanciales, le notificaremos por correo electrónico o mediante un aviso destacado en nuestro sitio web con al menos 30 días de antelación antes de que los cambios entren en vigor.\n\nLe recomendamos revisar esta política periódicamente. La fecha de \"Última actualización\" en la parte superior de esta página indica cuándo se revisó por última vez."
+      },
+      {
+        "title": "12. Contacto y Autoridad de Control",
+        "content": "Si tiene cualquier pregunta o inquietud sobre esta Política de Privacidad o nuestras prácticas de tratamiento de datos, puede contactarnos en:\n\nIBERANT SOLUTIONS S.L.\nEmail: info@iberant.com\nTeléfono: (+34) 620 219 379\nDirección: Paseo de la Castellana, 95, Piso 29, Torre Europa, 28046 Madrid, España\n\nSi considera que se han vulnerado sus derechos en materia de protección de datos, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD):\n\nAgencia Española de Protección de Datos\nC/ Jorge Juan, 6\n28001 Madrid, España\nWeb: www.aepd.es"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: 9 de abril de 2026",
+    "sections": [
+      {
+        "title": "1. Aceptación de los Términos",
+        "content": "Estos Términos de Servicio (\"Términos\") regulan su acceso y uso de la plataforma ChurroStack y los servicios relacionados (\"Servicio\") proporcionados por IBERANT SOLUTIONS S.L. (\"Empresa\", \"nosotros\", \"nos\"), sociedad inscrita en España con CIF ESB87402616 y domicilio social en Paseo de la Castellana, 95, Piso 29, Torre Europa, 28046 Madrid, España.\n\nAl crear una cuenta o utilizar el Servicio, usted acepta quedar vinculado por estos Términos. Si utiliza el Servicio en nombre de una organización, declara y garantiza que tiene autoridad para vincular a dicha organización a estos Términos."
+      },
+      {
+        "title": "2. Descripción del Servicio",
+        "content": "ChurroStack es una plataforma de código abierto que permite a los usuarios desplegar y gestionar aplicaciones, modelos de lenguaje de gran tamaño (LLMs) y herramientas MCP en infraestructura privada bare-metal utilizando Kubernetes. El Servicio incluye:\n\n• Un plano de control gestionado que se conecta a su infraestructura privada mediante túneles SSH inversos seguros.\n• Capacidades de despliegue, monitorización, logging y autenticación.\n• Alojamiento y enrutamiento de LLMs a través de un endpoint API compatible con OpenAI.\n• Modo Workspace para despliegues aislados multiusuario.\n• Una galería de MCP y LLMs para compartir recursos de IA.\n\nEl Servicio se proporciona \"tal cual\" y \"según disponibilidad\". Mejoramos y actualizamos el Servicio de forma continua, lo que puede incluir la adición, modificación o discontinuación de funcionalidades con un aviso razonable."
+      },
+      {
+        "title": "3. Registro de Cuenta",
+        "content": "Para utilizar el Servicio, debe crear una cuenta y proporcionar información precisa, completa y actualizada. Usted es responsable de:\n\n• Mantener la confidencialidad de las credenciales de su cuenta.\n• Todas las actividades que ocurran bajo su cuenta.\n• Notificarnos inmediatamente cualquier uso no autorizado de su cuenta.\n\nNos reservamos el derecho de suspender o cancelar cuentas que proporcionen información falsa, estén inactivas durante un período prolongado o incumplan estos Términos."
+      },
+      {
+        "title": "4. Suscripción y Pago",
+        "content": "El Servicio se ofrece bajo planes de suscripción según se describe en nuestra página de precios. Al suscribirse a un plan de pago, usted acepta lo siguiente:\n\n• Ciclo de facturación: Las suscripciones se facturan mensualmente por adelantado.\n• Métodos de pago: Aceptamos tarjetas de crédito y otros métodos de pago indicados durante el proceso de compra.\n• Cambios de precio: Podemos ajustar los precios con un preaviso mínimo de 30 días. El uso continuado del Servicio tras un cambio de precio constituye su aceptación.\n• Impuestos: Los precios no incluyen los impuestos aplicables (incluido IVA). Usted es responsable de los impuestos aplicables a su compra según la jurisdicción correspondiente.\n• Ancho de banda adicional: El consumo que exceda el ancho de banda incluido en su plan se facturará a la tarifa especificada en la página de precios.\n• Reembolsos: Las cuotas de suscripción no son reembolsables salvo cuando lo exija la legislación de protección al consumidor de la UE. Si usted es consumidor dentro de la UE, tiene derecho a desistir del contrato en un plazo de 14 días desde la compra, siempre que no haya comenzado a utilizar el Servicio."
+      },
+      {
+        "title": "5. Uso Aceptable",
+        "content": "Usted se compromete a utilizar el Servicio únicamente para fines lícitos y de conformidad con estos Términos. No debe:\n\n• Utilizar el Servicio para infringir cualquier ley o regulación local, nacional o internacional aplicable.\n• Desplegar, almacenar o transmitir contenido que sea ilegal, dañino, amenazante, abusivo, difamatorio o de cualquier otra manera censurable.\n• Intentar obtener acceso no autorizado al Servicio, a otras cuentas o a la infraestructura conectada.\n• Interferir con o alterar la integridad o el rendimiento del Servicio.\n• Utilizar el Servicio para minería de criptomonedas sin autorización previa por escrito.\n• Realizar ingeniería inversa, descompilar o desensamblar los componentes propietarios del Servicio.\n• Revender o redistribuir el Servicio sin autorización previa por escrito.\n\nNos reservamos el derecho de suspender o cancelar su acceso por incumplimiento de esta política, con o sin previo aviso dependiendo de la gravedad de la infracción."
+      },
+      {
+        "title": "6. Propiedad Intelectual",
+        "content": "El núcleo de código abierto de ChurroStack está licenciado bajo su respectiva licencia de código abierto. Todos los componentes propietarios, incluyendo el plano de control gestionado, funcionalidades premium, marcas registradas, logotipos, documentación y contenido del sitio web, son propiedad exclusiva de IBERANT SOLUTIONS S.L. y están protegidos por la legislación española e internacional de propiedad intelectual.\n\nUsted conserva todos los derechos sobre los datos, aplicaciones y contenido que despliegue a través del Servicio (\"Su Contenido\"). Nos otorga una licencia limitada para procesar Su Contenido exclusivamente con el fin de proporcionar y mantener el Servicio."
+      },
+      {
+        "title": "7. Protección de Datos",
+        "content": "Tratamos los datos personales de conformidad con el Reglamento General de Protección de Datos (UE) 2016/679 (\"RGPD\") y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (\"LOPDGDD\"). Para más información sobre cómo recopilamos, utilizamos y protegemos sus datos personales, consulte nuestra Política de Privacidad.\n\nSi utiliza el Servicio para tratar datos personales de terceros (por ejemplo, sus usuarios finales), usted actúa como responsable del tratamiento y nosotros como encargado del tratamiento. En tales casos, un Contrato de Encargo del Tratamiento regulará nuestras actividades de tratamiento en su nombre. Puede solicitar una copia de nuestro contrato contactando a info@iberant.com."
+      },
+      {
+        "title": "8. Disponibilidad del Servicio y SLA",
+        "content": "Nos esforzamos por mantener una alta disponibilidad del Servicio. Los compromisos específicos de disponibilidad dependen de su plan de suscripción:\n\n• Plan Personal: Sin garantía de SLA.\n• Plan Profesional: SLA Nivel C.\n• Plan Equipo: SLA Nivel B.\n• Plan Enterprise: SLA Nivel A.\n\nLos términos detallados del SLA, incluyendo porcentajes de disponibilidad y compensaciones, se proporcionan en el Acuerdo de Nivel de Servicio aplicable a su plan. Las ventanas de mantenimiento programado se comunicarán con al menos 48 horas de antelación.\n\nEl SLA aplica únicamente al plano de control gestionado de ChurroStack. La disponibilidad de su infraestructura privada y las aplicaciones desplegadas en ella es su responsabilidad."
+      },
+      {
+        "title": "9. Limitación de Responsabilidad",
+        "content": "En la máxima medida permitida por la legislación aplicable, IBERANT SOLUTIONS S.L. no será responsable de:\n\n• Daños indirectos, incidentales, especiales, consecuentes o punitivos.\n• Lucro cesante, pérdida de datos, de negocio o de fondo de comercio.\n• Daños derivados del uso o la imposibilidad de uso del Servicio.\n• Daños resultantes del acceso no autorizado o la alteración de sus datos.\n\nNuestra responsabilidad total acumulada por cualquier reclamación derivada de o relacionada con estos Términos o el Servicio no excederá el importe total que usted nos haya pagado durante los doce (12) meses anteriores a la reclamación.\n\nNada en estos Términos excluye o limita nuestra responsabilidad por muerte o lesiones personales causadas por negligencia, fraude o cualquier otra responsabilidad que no pueda excluirse según la legislación aplicable de la UE o española."
+      },
+      {
+        "title": "10. Indemnización",
+        "content": "Usted se compromete a indemnizar, defender y mantener indemne a IBERANT SOLUTIONS S.L., sus administradores, empleados y agentes frente a cualquier reclamación, daño, pérdida, responsabilidad y gasto (incluidos honorarios legales razonables) derivados de o relacionados con:\n\n• Su uso del Servicio.\n• Su incumplimiento de estos Términos.\n• Su infracción de cualquier ley aplicable o de los derechos de terceros.\n• Su Contenido o cualquier dato procesado a través de su cuenta."
+      },
+      {
+        "title": "11. Resolución",
+        "content": "Cualquiera de las partes puede resolver la suscripción:\n\n• Usted puede cancelar su suscripción en cualquier momento a través de la configuración de su cuenta. La cancelación será efectiva al final del período de facturación en curso.\n• Nosotros podemos resolver o suspender su acceso de forma inmediata si incumple materialmente estos Términos, no paga las cuotas a su vencimiento o si así lo requiere la ley.\n\nTras la resolución:\n• Su derecho de acceso al Servicio cesará de inmediato (o al final del período de facturación en caso de cancelación voluntaria).\n• Pondremos sus datos a su disposición para exportación durante 30 días tras la resolución.\n• Transcurrido el período de exportación de 30 días, eliminaremos sus datos de nuestros sistemas activos, sujeto a las obligaciones de conservación conforme a la legislación aplicable."
+      },
+      {
+        "title": "12. Modificaciones de estos Términos",
+        "content": "Podemos modificar estos Términos periódicamente. Cuando realicemos cambios sustanciales, le notificaremos por correo electrónico o mediante un aviso destacado en nuestro sitio web con al menos 30 días de antelación antes de que los cambios entren en vigor.\n\nSi no está de acuerdo con los Términos modificados, puede resolver su suscripción antes de que los cambios entren en vigor. El uso continuado del Servicio tras la fecha de entrada en vigor constituye la aceptación de los Términos modificados."
+      },
+      {
+        "title": "13. Legislación Aplicable y Jurisdicción",
+        "content": "Estos Términos se rigen e interpretan de conformidad con las leyes del Reino de España, sin tener en cuenta sus principios de conflicto de leyes, y en cumplimiento de las regulaciones aplicables de la Unión Europea.\n\nPara clientes empresariales, cualquier disputa derivada de o relacionada con estos Términos se someterá a la jurisdicción exclusiva de los juzgados y tribunales de Madrid, España.\n\nPara consumidores dentro de la UE, esta cláusula no afecta su derecho a interponer procedimientos ante los tribunales de su país de residencia, según lo garantizado por el Reglamento (UE) nº 1215/2012 (Bruselas I refundido). Adicionalmente, los consumidores pueden acceder a la plataforma de Resolución de Litigios en Línea (ODR) de la Comisión Europea en https://ec.europa.eu/consumers/odr/.\n\nSi alguna disposición de estos Términos se considera inválida o inaplicable, las disposiciones restantes permanecerán en pleno vigor y efecto."
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Política de Cookies",
+    "lastUpdated": "Última actualización: 9 de abril de 2026",
+    "sections": [
+      {
+        "title": "1. Qué Son las Cookies",
+        "content": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo (ordenador, tableta o smartphone) cuando visita un sitio web. Se utilizan ampliamente para que los sitios web funcionen de manera eficiente, proporcionen una mejor experiencia de usuario y suministren información a los operadores del sitio.\n\nEsta Política de Cookies explica cómo IBERANT SOLUTIONS S.L. (\"nosotros\", \"nos\"), operador de la plataforma ChurroStack, utiliza cookies y tecnologías similares en nuestro sitio web, en cumplimiento del Reglamento (UE) 2016/679 (RGPD), la LOPDGDD (Ley Orgánica 3/2018) y la LSSI-CE (Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico)."
+      },
+      {
+        "title": "2. Cómo Utilizamos las Cookies",
+        "content": "Utilizamos cookies para:\n\n• Garantizar que el sitio web funcione correcta y seguramente.\n• Recordar sus preferencias (idioma, tema, consentimiento de cookies).\n• Comprender cómo los visitantes interactúan con nuestro sitio web para mejorar nuestro contenido y servicios.\n• Medir la efectividad de nuestras comunicaciones.\n\nAlgunas cookies son establecidas por nosotros (cookies propias), mientras que otras son establecidas por servicios de terceros que utilizamos (cookies de terceros)."
+      },
+      {
+        "title": "3. Tipos de Cookies que Utilizamos",
+        "content": "Cookies estrictamente necesarias:\nEstas cookies son esenciales para el funcionamiento del sitio web. Habilitan funciones básicas como la seguridad, la gestión de sesiones y la accesibilidad. Estas cookies no requieren su consentimiento conforme a la LSSI-CE.\n• Cookies de sesión para autenticación.\n• Tokens de protección CSRF.\n• Preferencias de consentimiento de cookies.\n\nCookies funcionales:\nEstas cookies permiten funcionalidades mejoradas y personalización, como recordar su preferencia de idioma o tema.\n• Preferencia de idioma (es/en).\n• Preferencia de tema (claro/oscuro).\n\nCookies analíticas:\nEstas cookies nos ayudan a comprender cómo los visitantes utilizan nuestro sitio web recopilando información de forma anónima. Solo se activan con su consentimiento explícito.\n• Páginas vistas y patrones de navegación.\n• Duración de la sesión y tasa de rebote.\n• Información del dispositivo y navegador.\n\nCookies de marketing:\nActualmente no utilizamos cookies de marketing ni publicitarias. Si las introducimos en el futuro, actualizaremos esta política y solicitaremos su consentimiento antes de activarlas."
+      },
+      {
+        "title": "4. Cookies de Terceros",
+        "content": "Nuestro sitio web puede incluir cookies establecidas por los siguientes servicios de terceros:\n\n• Proveedores de analítica: Para recopilar estadísticas de uso anonimizadas y ayudarnos a mejorar el sitio web.\n• Redes de distribución de contenido: Para servir los recursos del sitio web de manera eficiente y segura.\n\nEstos terceros procesan datos de acuerdo con sus propias políticas de privacidad. Nos aseguramos de que todos los servicios de terceros que utilizamos cumplan con los requisitos del RGPD y, cuando corresponda, hayan firmado contratos de encargo del tratamiento con nosotros.\n\nNo permitimos que terceros utilicen cookies en nuestro sitio web para sus propios fines publicitarios."
+      },
+      {
+        "title": "5. Gestión de Sus Preferencias de Cookies",
+        "content": "Cuando visite nuestro sitio web por primera vez, un banner de cookies le permitirá aceptar o rechazar las cookies no esenciales. Puede cambiar sus preferencias en cualquier momento.\n\nTambién puede gestionar las cookies a través de la configuración de su navegador. La mayoría de los navegadores le permiten:\n\n• Ver qué cookies están almacenadas y eliminarlas individualmente.\n• Bloquear cookies de terceros.\n• Bloquear cookies de sitios específicos.\n• Bloquear todas las cookies.\n• Eliminar todas las cookies al cerrar el navegador.\n\nTenga en cuenta que bloquear o eliminar cookies puede afectar la funcionalidad de nuestro sitio web y su experiencia de usuario.\n\nConfiguración de cookies del navegador:\n• Chrome: Configuración → Privacidad y seguridad → Cookies\n• Firefox: Configuración → Privacidad y seguridad → Cookies y datos del sitio\n• Safari: Preferencias → Privacidad → Cookies y datos de sitios web\n• Edge: Configuración → Cookies y permisos del sitio"
+      },
+      {
+        "title": "6. Cambios en Esta Política",
+        "content": "Podemos actualizar esta Política de Cookies periódicamente para reflejar cambios en las cookies que utilizamos o por razones legales, regulatorias u operativas. Cuando realicemos cambios, actualizaremos la fecha de \"Última actualización\" en la parte superior de esta página.\n\nSi introducimos nuevas categorías de cookies que requieran consentimiento, le solicitaremos su consentimiento nuevamente a través de nuestro banner de cookies."
+      },
+      {
+        "title": "7. Contacto",
+        "content": "Si tiene cualquier pregunta sobre esta Política de Cookies o sobre nuestro uso de cookies, puede contactarnos en:\n\nIBERANT SOLUTIONS S.L.\nEmail: info@iberant.com\nTeléfono: (+34) 620 219 379\nDirección: Paseo de la Castellana, 95, Piso 29, Torre Europa, 28046 Madrid, España\n\nTambién puede contactar con la Agencia Española de Protección de Datos (AEPD) en www.aepd.es si tiene inquietudes sobre cómo gestionamos las cookies y sus datos personales."
+      }
+    ]
+  }
+}

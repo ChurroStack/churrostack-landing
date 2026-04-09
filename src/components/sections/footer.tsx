@@ -1,0 +1,110 @@
+"use client";
+
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { ShieldCheck, Globe, Lock } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { Link } from "@/i18n/navigation";
+
+const COMPLIANCE_ICONS = [ShieldCheck, Globe, Lock];
+
+const FOOTER_SECTIONS = ["product", "company", "legal"] as const;
+const LINK_COUNTS: Record<string, number> = {
+  product: 3,
+  company: 3,
+  legal: 3,
+};
+
+export function Footer() {
+  const t = useTranslations("footer");
+
+  return (
+    <footer className="bg-foreground text-background">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="ChurroStack"
+                width={28}
+                height={28}
+                className="invert dark:invert-0"
+              />
+              <span className="text-lg font-bold">{t("brand")}</span>
+            </div>
+            <p className="mt-4 text-sm text-background/60 leading-relaxed">
+              {t("tagline")}
+            </p>
+          </div>
+
+          {/* Link columns */}
+          {FOOTER_SECTIONS.map((section) => (
+            <div key={section}>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-background/80">
+                {t(`sections.${section}.title`)}
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {Array.from({ length: LINK_COUNTS[section] }, (_, i) => {
+                  const href = t(`sections.${section}.links.${i}.href`);
+                  const label = t(`sections.${section}.links.${i}.label`);
+                  const className =
+                    "text-sm text-background/50 transition-colors hover:text-background";
+                  const isInternal =
+                    href.startsWith("/") && !href.startsWith("#");
+                  const isExternal = href.startsWith("http");
+
+                  return (
+                    <li key={i}>
+                      {isInternal ? (
+                        <Link href={href} className={className}>
+                          {label}
+                        </Link>
+                      ) : isExternal ? (
+                        <a
+                          href={href}
+                          className={className}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {label}
+                        </a>
+                      ) : (
+                        <a href={href} className={className}>
+                          {label}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <Separator className="my-8 bg-background/10" />
+
+        {/* Compliance */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-2 mb-8">
+          {Array.from({ length: 3 }, (_, i) => {
+            const Icon = COMPLIANCE_ICONS[i];
+            return (
+              <div key={i} className="flex items-center gap-1.5">
+                <Icon className="h-3.5 w-3.5 text-background/40" />
+                <span className="text-[11px] text-background/40">
+                  {t(`compliance.${i}`)}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <p className="text-xs text-background/40">{t("copyright")}</p>
+          <p className="text-xs text-background/40">{t("madeWith")}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
