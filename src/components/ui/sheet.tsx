@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -106,6 +107,11 @@ const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { onDrag, onDragStart, onDragEnd, onAnimationStart, ...restProps } = props as Record<string, unknown>;
     const { open, setOpen } = useSheet();
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+      setMounted(true);
+    }, []);
 
     // Lock body scroll when open
     React.useEffect(() => {
@@ -123,13 +129,15 @@ const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
       exit: { x: side === "right" ? "100%" : "-100%" },
     };
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
       <AnimatePresence>
         {open && (
           <>
             {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 z-50 bg-black/80"
+              className="fixed inset-0 z-[100] bg-black/80"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -141,7 +149,7 @@ const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
             <motion.div
               ref={ref}
               className={cn(
-                "fixed inset-y-0 z-50 flex h-full w-3/4 max-w-sm flex-col gap-4 border-l bg-background p-6 shadow-lg",
+                "fixed inset-y-0 z-[101] flex h-full w-3/4 max-w-sm flex-col gap-4 border-l bg-white dark:bg-zinc-950 p-6 shadow-lg",
                 side === "right" ? "right-0" : "left-0 border-l-0 border-r",
                 className
               )}
@@ -165,7 +173,8 @@ const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
             </motion.div>
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body
     );
   }
 );
