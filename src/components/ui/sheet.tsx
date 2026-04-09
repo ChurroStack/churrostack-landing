@@ -149,7 +149,7 @@ const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
             <motion.div
               ref={ref}
               className={cn(
-                "fixed inset-y-0 z-[101] flex h-full w-3/4 max-w-sm flex-col gap-4 border-l bg-white dark:bg-zinc-950 p-6 shadow-lg",
+                "fixed inset-y-0 z-[101] flex h-full w-3/4 max-w-sm flex-col gap-4 border-l border-border bg-background p-6 shadow-lg",
                 side === "right" ? "right-0" : "left-0 border-l-0 border-r",
                 className
               )}

@@ -27,11 +27,14 @@ export function Navbar() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
+  const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   const handleScroll = useCallback(() => {
     const currentY = window.scrollY;
@@ -86,11 +89,10 @@ export function Navbar() {
           className="flex items-center gap-2"
         >
           <Image
-            src="/logo.png"
+            src={mounted && resolvedTheme === "dark" ? "/logo-white.png" : "/logo.png"}
             alt="ChurroStack"
             width={32}
             height={32}
-            className="dark:invert"
           />
           <span className="text-lg font-bold tracking-tight">
             {t("brand")}
@@ -157,11 +159,10 @@ export function Navbar() {
               <div className="flex flex-col gap-6 pt-8">
                 <div className="flex items-center gap-2 px-2">
                   <Image
-                    src="/logo.png"
+                    src={mounted && resolvedTheme === "dark" ? "/logo-white.png" : "/logo.png"}
                     alt="ChurroStack"
                     width={28}
                     height={28}
-                    className="dark:invert"
                   />
                   <span className="font-bold">{t("brand")}</span>
                 </div>
