@@ -121,7 +121,7 @@ export function Hero() {
               <div className="h-3 w-3 rounded-full bg-yellow-400/80" />
               <div className="h-3 w-3 rounded-full bg-green-400/80" />
               <div className="ml-4 flex-1 rounded-md bg-background/60 px-3 py-1 text-xs text-muted-foreground">
-                app.churrostack.com
+                https://portal.churrostack.com
               </div>
             </div>
             {/* Screenshot area */}

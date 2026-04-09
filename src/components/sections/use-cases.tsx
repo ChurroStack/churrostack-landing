@@ -40,10 +40,10 @@ export function UseCases() {
           {Array.from({ length: 4 }, (_, i) => {
             const { Icon, accent } = USE_CASE_CONFIG[i];
             return (
-              <ScrollAnimation key={i} delay={i * 0.1}>
+              <ScrollAnimation key={i} delay={i * 0.1} className="h-full">
                 <Card
                   className={cn(
-                    "group transition-all duration-300",
+                    "h-full group transition-all duration-300",
                     "hover:-translate-y-1 hover:shadow-lg hover:border-foreground/20"
                   )}
                 >

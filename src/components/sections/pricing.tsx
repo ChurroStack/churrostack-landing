@@ -49,10 +49,10 @@ export function Pricing() {
             const isPopular = i === 1;
             const featureCount = PLAN_FEATURE_COUNTS[i];
             return (
-              <ScrollAnimation key={i} delay={i * 0.1}>
+              <ScrollAnimation key={i} delay={i * 0.1} className="h-full">
                 <Card
                   className={cn(
-                    "relative flex flex-col transition-all duration-300",
+                    "h-full relative flex flex-col transition-all duration-300",
                     isPopular
                       ? "border-foreground shadow-xl scale-[1.02] lg:scale-105"
                       : "hover:-translate-y-1 hover:shadow-lg"
@@ -77,6 +77,11 @@ export function Pricing() {
 
                   <CardContent className="flex-1">
                     <div className="mb-6">
+                      {i === 3 && (
+                        <span className="block text-xs font-medium text-muted-foreground mb-1">
+                          {t("startingAt")}
+                        </span>
+                      )}
                       <span className="text-3xl font-bold">
                         {t(`plans.${i}.price`)}
                       </span>

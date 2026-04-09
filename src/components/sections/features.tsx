@@ -44,10 +44,10 @@ export function Features() {
           {Array.from({ length: 8 }, (_, i) => {
             const Icon = ICONS[i];
             return (
-              <ScrollAnimation key={i} delay={i * 0.05}>
+              <ScrollAnimation key={i} delay={i * 0.05} className="h-full">
                 <Card
                   className={cn(
-                    "group relative overflow-hidden transition-all duration-300",
+                    "h-full group relative overflow-hidden transition-all duration-300",
                     "hover:-translate-y-1 hover:shadow-lg hover:border-foreground/20"
                   )}
                 >

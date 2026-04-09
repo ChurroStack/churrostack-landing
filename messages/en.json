@@ -195,7 +195,8 @@
       {
         "name": "Enterprise",
         "price": "$4,000",
-        "description": "For large organizations with dedicated needs",
+        "startingAt": true,
+        "description": "For large organizations — scales with your needs",
         "popular": false,
         "features": [
           "50+ Environments",
@@ -292,7 +293,7 @@
       "company": {
         "title": "Company",
         "links": [
-          { "label": "About", "href": "/about" },
+          { "label": "About", "href": "https://www.iberant.es" },
           { "label": "Blog", "href": "/blog" },
           { "label": "Careers", "href": "/careers" },
           { "label": "Contact", "href": "#contact" }
@@ -307,6 +308,11 @@
         ]
       }
     },
+    "compliance": [
+      "Hosted in ISO 27001, SOC 2 and ENS certified data centers",
+      "Data stored in the EU (West Europe region)",
+      "Encryption in transit and at rest with Microsoft Azure standards"
+    ],
     "copyright": "© 2025 ChurroStack. All rights reserved.",
     "madeWith": "Made with ❤️ for infrastructure teams"
   }

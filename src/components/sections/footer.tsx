@@ -2,7 +2,10 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ShieldCheck, Globe, Lock } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+
+const COMPLIANCE_ICONS = [ShieldCheck, Globe, Lock];
 
 const FOOTER_SECTIONS = ["product", "company", "legal"] as const;
 const LINK_COUNTS: Record<string, number> = {
@@ -58,6 +61,21 @@ export function Footer() {
         </div>
 
         <Separator className="my-8 bg-background/10" />
+
+        {/* Compliance */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-2 mb-8">
+          {Array.from({ length: 3 }, (_, i) => {
+            const Icon = COMPLIANCE_ICONS[i];
+            return (
+              <div key={i} className="flex items-center gap-1.5">
+                <Icon className="h-3.5 w-3.5 text-background/40" />
+                <span className="text-[11px] text-background/40">
+                  {t(`compliance.${i}`)}
+                </span>
+              </div>
+            );
+          })}
+        </div>
 
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-background/40">{t("copyright")}</p>

@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description:
     "The open-source platform to deploy and manage applications, LLMs, and MCP tools on your own hardware. Simple as making churros.",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
