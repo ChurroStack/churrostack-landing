@@ -55,7 +55,7 @@ export function Pricing() {
                     "h-full relative flex flex-col transition-all duration-300",
                     isPopular
                       ? "border-foreground shadow-xl scale-[1.02] lg:scale-105"
-                      : "hover:-translate-y-1 hover:shadow-lg"
+                      : "hover:-translate-y-1 hover:shadow-lg hover:border-foreground"
                   )}
                 >
                   {isPopular && (

@@ -45,8 +45,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  const isHome = pathname === "/";
+
   function scrollTo(href: string) {
     const id = href.replace("#", "");
+    if (!isHome) {
+      router.push(`/${href}`);
+      return;
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   }
 
@@ -71,7 +77,11 @@ export function Navbar() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (!isHome) {
+              router.push("/");
+            } else {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
           className="flex items-center gap-2"
         >

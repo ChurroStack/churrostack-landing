@@ -48,7 +48,7 @@ export function Features() {
                 <Card
                   className={cn(
                     "h-full group relative overflow-hidden transition-all duration-300",
-                    "hover:-translate-y-1 hover:shadow-lg hover:border-foreground/20"
+                    "hover:-translate-y-1 hover:shadow-lg hover:border-foreground"
                   )}
                 >
                   <CardHeader>
