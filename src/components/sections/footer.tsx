@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ShieldCheck, Globe, Lock } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "@/i18n/navigation";
 
 const COMPLIANCE_ICONS = [ShieldCheck, Globe, Lock];
 
@@ -45,16 +46,38 @@ export function Footer() {
                 {t(`sections.${section}.title`)}
               </h3>
               <ul className="mt-4 space-y-3">
-                {Array.from({ length: LINK_COUNTS[section] }, (_, i) => (
-                  <li key={i}>
-                    <a
-                      href={t(`sections.${section}.links.${i}.href`)}
-                      className="text-sm text-background/50 transition-colors hover:text-background"
-                    >
-                      {t(`sections.${section}.links.${i}.label`)}
-                    </a>
-                  </li>
-                ))}
+                {Array.from({ length: LINK_COUNTS[section] }, (_, i) => {
+                  const href = t(`sections.${section}.links.${i}.href`);
+                  const label = t(`sections.${section}.links.${i}.label`);
+                  const className =
+                    "text-sm text-background/50 transition-colors hover:text-background";
+                  const isInternal =
+                    href.startsWith("/") && !href.startsWith("#");
+                  const isExternal = href.startsWith("http");
+
+                  return (
+                    <li key={i}>
+                      {isInternal ? (
+                        <Link href={href} className={className}>
+                          {label}
+                        </Link>
+                      ) : isExternal ? (
+                        <a
+                          href={href}
+                          className={className}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {label}
+                        </a>
+                      ) : (
+                        <a href={href} className={className}>
+                          {label}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

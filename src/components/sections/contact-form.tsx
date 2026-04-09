@@ -17,6 +17,7 @@ const formSchema = z.object({
   email: z.string().email(),
   company: z.string().optional(),
   message: z.string().min(10),
+  website: z.string().max(0).optional(), // honeypot
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -25,21 +26,38 @@ export function ContactForm() {
   const t = useTranslations("contact");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
-    defaultValues: { name: "", email: "", company: "", message: "" },
+    defaultValues: { name: "", email: "", company: "", message: "", website: "" },
   });
 
-  async function onSubmit(_data: FormData) {
+  async function onSubmit(data: FormData) {
     setLoading(true);
-    // Simulate API call
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        throw new Error(body?.error || "Request failed");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError(t("form.error"));
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -129,6 +147,22 @@ export function ContactForm() {
                   </p>
                 )}
               </div>
+
+              {/* Honeypot — hidden from real users, bots fill it */}
+              <div aria-hidden="true" className="absolute -left-[9999px] -top-[9999px]">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  autoComplete="off"
+                  tabIndex={-1}
+                  {...register("website")}
+                />
+              </div>
+
+              {error && (
+                <p className="text-sm text-destructive text-center">{error}</p>
+              )}
 
               <Button
                 type="submit"

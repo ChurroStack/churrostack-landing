@@ -1,13 +1,27 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Sparkles, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") closeLightbox();
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [lightboxOpen, closeLightbox]);
 
   function scrollToContact() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -125,19 +139,51 @@ export function Hero() {
               </div>
             </div>
             {/* Screenshot area */}
-            <div className="flex aspect-video items-center justify-center bg-muted/20 p-8">
-              <div className="text-center">
-                <p className="text-lg font-medium text-muted-foreground">
-                  Platform Screenshot
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground/60">
-                  {t("screenshotAlt")}
-                </p>
-              </div>
-            </div>
+            <button
+              type="button"
+              className="relative aspect-video w-full bg-muted/20 cursor-zoom-in"
+              onClick={() => setLightboxOpen(true)}
+            >
+              <Image
+                src="/screenshot-01.png"
+                alt={t("screenshotAlt")}
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </button>
           </div>
         </motion.div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 cursor-zoom-out p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeLightbox}
+          >
+            <motion.div
+              className="relative max-h-[90vh] max-w-[90vw] w-full"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Image
+                src="/screenshot-01.png"
+                alt={t("screenshotAlt")}
+                width={1920}
+                height={1080}
+                className="h-auto max-h-[90vh] w-auto max-w-full mx-auto rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
