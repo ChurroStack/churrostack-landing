@@ -286,15 +286,13 @@
         "links": [
           { "label": "Features", "href": "#features" },
           { "label": "Pricing", "href": "#pricing" },
-          { "label": "Documentation", "href": "/docs" },
-          { "label": "Changelog", "href": "/changelog" }
+          { "label": "Documentation", "href": "/docs" }
         ]
       },
       "company": {
         "title": "Company",
         "links": [
           { "label": "About", "href": "https://www.iberant.es" },
-          { "label": "Blog", "href": "/blog" },
           { "label": "Careers", "href": "https://www.iberant.es" },
           { "label": "Contact", "href": "#contact" }
         ]

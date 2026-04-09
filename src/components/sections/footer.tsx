@@ -10,8 +10,8 @@ const COMPLIANCE_ICONS = [ShieldCheck, Globe, Lock];
 
 const FOOTER_SECTIONS = ["product", "company", "legal"] as const;
 const LINK_COUNTS: Record<string, number> = {
-  product: 4,
-  company: 4,
+  product: 3,
+  company: 3,
   legal: 3,
 };
 

@@ -1,16 +1,50 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Sparkles, GitBranch } from "lucide-react";
+import { Sparkles, GitBranch, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
+const SCREENSHOTS = [
+  "/screenshot-01.png",
+  "/screenshot-02.png",
+  "/screenshot-03.png",
+  "/screenshot-04.png",
+];
+const AUTO_ADVANCE_MS = 4000;
+
 export function Hero() {
   const t = useTranslations("hero");
+  const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      setActiveIndex((i) => (i + 1) % SCREENSHOTS.length);
+    }, AUTO_ADVANCE_MS);
+  }, []);
+
+  useEffect(() => {
+    resetTimer();
+    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
+  }, [activeIndex, resetTimer]);
+
+  const goTo = useCallback((index: number) => {
+    setActiveIndex(index);
+  }, []);
+
+  const goPrev = useCallback(() => {
+    setActiveIndex((i) => (i - 1 + SCREENSHOTS.length) % SCREENSHOTS.length);
+  }, []);
+
+  const goNext = useCallback(() => {
+    setActiveIndex((i) => (i + 1) % SCREENSHOTS.length);
+  }, []);
 
   const closeLightbox = useCallback(() => setLightboxOpen(false), []);
 
@@ -18,6 +52,8 @@ export function Hero() {
     if (!lightboxOpen) return;
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") setActiveIndex((i) => (i - 1 + SCREENSHOTS.length) % SCREENSHOTS.length);
+      if (e.key === "ArrowRight") setActiveIndex((i) => (i + 1) % SCREENSHOTS.length);
     }
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
@@ -138,20 +174,63 @@ export function Hero() {
                 https://portal.churrostack.com
               </div>
             </div>
-            {/* Screenshot area */}
-            <button
-              type="button"
-              className="relative aspect-video w-full bg-muted/20 cursor-zoom-in"
-              onClick={() => setLightboxOpen(true)}
-            >
-              <Image
-                src="/screenshot-01.png"
-                alt={t("screenshotAlt")}
-                fill
-                className="object-cover object-top"
-                priority
-              />
-            </button>
+            {/* Screenshot carousel */}
+            <div className="relative aspect-video w-full bg-muted/20 overflow-hidden group">
+              <AnimatePresence mode="wait">
+                <motion.button
+                  key={activeIndex}
+                  type="button"
+                  className="absolute inset-0 cursor-zoom-in"
+                  onClick={() => setLightboxOpen(true)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <Image
+                    src={SCREENSHOTS[activeIndex]}
+                    alt={t("screenshotAlt")}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="object-cover object-top"
+                    loading="eager"
+                    priority={activeIndex === 0}
+                  />
+                </motion.button>
+              </AnimatePresence>
+
+              {/* Prev / Next arrows */}
+              <button
+                type="button"
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-background/70 border border-border text-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                onClick={(e) => { e.stopPropagation(); goPrev(); }}
+                aria-label="Previous screenshot"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-background/70 border border-border text-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                onClick={(e) => { e.stopPropagation(); goNext(); }}
+                aria-label="Next screenshot"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+
+            </div>
+
+            {/* Dot indicators */}
+            <div className="flex justify-center gap-1.5 py-3 border-t border-border bg-muted/50">
+              {SCREENSHOTS.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? "w-5 bg-foreground" : "w-1.5 bg-foreground/40"}`}
+                  onClick={(e) => { e.stopPropagation(); goTo(i); }}
+                  aria-label={`Go to screenshot ${i + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
@@ -172,14 +251,56 @@ export function Hero() {
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
               transition={{ duration: 0.2 }}
+              onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src="/screenshot-01.png"
-                alt={t("screenshotAlt")}
-                width={1920}
-                height={1080}
-                className="h-auto max-h-[90vh] w-auto max-w-full mx-auto rounded-lg"
-              />
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Image
+                    src={SCREENSHOTS[activeIndex]}
+                    alt={t("screenshotAlt")}
+                    width={1920}
+                    height={1080}
+                    className="h-auto max-h-[90vh] w-auto max-w-full mx-auto rounded-lg"
+                  />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Lightbox prev/next */}
+              <button
+                type="button"
+                className="absolute left-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70"
+                onClick={() => setActiveIndex((i) => (i - 1 + SCREENSHOTS.length) % SCREENSHOTS.length)}
+                aria-label="Previous screenshot"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                type="button"
+                className="absolute right-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70"
+                onClick={() => setActiveIndex((i) => (i + 1) % SCREENSHOTS.length)}
+                aria-label="Next screenshot"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+
+              {/* Lightbox dots */}
+              <div className="mt-4 flex justify-center gap-2">
+                {SCREENSHOTS.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? "w-6 bg-white" : "w-2 bg-white/40"}`}
+                    onClick={() => goTo(i)}
+                    aria-label={`Go to screenshot ${i + 1}`}
+                  />
+                ))}
+              </div>
             </motion.div>
           </motion.div>
         )}
