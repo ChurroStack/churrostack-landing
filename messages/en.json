@@ -284,25 +284,52 @@
       "product": {
         "title": "Product",
         "links": [
-          { "label": "Features", "href": "#features" },
-          { "label": "Pricing", "href": "#pricing" },
-          { "label": "Documentation", "href": "/docs" }
+          {
+            "label": "Features",
+            "href": "#features"
+          },
+          {
+            "label": "Pricing",
+            "href": "#pricing"
+          },
+          {
+            "label": "Documentation",
+            "href": "/docs"
+          }
         ]
       },
       "company": {
         "title": "Company",
         "links": [
-          { "label": "About", "href": "https://www.iberant.es" },
-          { "label": "Careers", "href": "https://www.iberant.es" },
-          { "label": "Contact", "href": "#contact" }
+          {
+            "label": "About",
+            "href": "https://www.iberant.es"
+          },
+          {
+            "label": "Careers",
+            "href": "https://www.iberant.es"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact"
+          }
         ]
       },
       "legal": {
         "title": "Legal",
         "links": [
-          { "label": "Privacy Policy", "href": "/privacy" },
-          { "label": "Terms of Service", "href": "/terms" },
-          { "label": "Cookie Policy", "href": "/cookies" }
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "/terms"
+          },
+          {
+            "label": "Cookie Policy",
+            "href": "/cookies"
+          }
         ]
       }
     },
@@ -312,7 +339,8 @@
       "Encryption in transit and at rest with Microsoft Azure standards"
     ],
     "copyright": "© 2025 ChurroStack. All rights reserved.",
-    "madeWith": "Made with ❤️ for infrastructure teams"
+    "madeWith": "Made with ❤️ for infrastructure teams",
+    "cookiePreferences": "Cookie preferences"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -459,5 +487,33 @@
         "content": "If you have any questions about this Cookie Policy or our use of cookies, please contact us at:\n\nIBERANT SOLUTIONS S.L.\nEmail: info@iberant.com\nPhone: (+34) 620 219 379\nAddress: Paseo de la Castellana, 95, Piso 29, Torre Europa, 28046 Madrid, Spain\n\nYou may also contact the Spanish Data Protection Agency (AEPD) at www.aepd.es if you have concerns about how we handle cookies and your personal data."
       }
     ]
+  },
+  "cookieBanner": {
+    "title": "We value your privacy",
+    "description": "We use cookies to enhance your browsing experience and analyze site traffic. Analytics cookies are only set with your explicit consent. You can manage your preferences at any time.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "managePreferences": "Manage preferences",
+    "preferences": {
+      "title": "Privacy preferences",
+      "save": "Save preferences"
+    },
+    "necessary": {
+      "title": "Strictly necessary",
+      "description": "These cookies are essential for the website to function. They cannot be disabled. They enable core features such as security, session management, and your cookie consent preferences."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "These cookies help us understand how visitors interact with our website. All data is collected anonymously. We use Google Analytics to measure page views, session duration, and navigation patterns. These cookies are only activated with your explicit consent."
+    },
+    "moreInfo": {
+      "title": "More information",
+      "description": "For details on how we use cookies, please read our <a href=\"/en/cookies\" class=\"cc-link\">Cookie Policy</a> and <a href=\"/en/privacy\" class=\"cc-link\">Privacy Policy</a>. You can update your consent preferences at any time using the cookie settings button."
+    },
+    "cookieTable": {
+      "header": "Description",
+      "ga": "Registers a unique ID to generate statistical data on how you use the website. Expires in 2 years.",
+      "gid": "Registers a unique ID to generate statistical data on how you use the website. Expires in 24 hours."
+    }
   }
 }

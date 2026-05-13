@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { ShieldCheck, Globe, Lock } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "@/i18n/navigation";
+import { CookiePreferencesButton } from "@/components/cookie-consent";
 
 const COMPLIANCE_ICONS = [ShieldCheck, Globe, Lock];
 
@@ -102,6 +103,9 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-background/40">{t("copyright")}</p>
+          <CookiePreferencesButton className="text-xs text-background/40 transition-colors hover:text-background/70 cursor-pointer">
+            {t("cookiePreferences")}
+          </CookiePreferencesButton>
           <p className="text-xs text-background/40">{t("madeWith")}</p>
         </div>
       </div>

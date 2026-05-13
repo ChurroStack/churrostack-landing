@@ -284,25 +284,52 @@
       "product": {
         "title": "Producto",
         "links": [
-          { "label": "Características", "href": "#features" },
-          { "label": "Precios", "href": "#pricing" },
-          { "label": "Documentación", "href": "/docs" }
+          {
+            "label": "Características",
+            "href": "#features"
+          },
+          {
+            "label": "Precios",
+            "href": "#pricing"
+          },
+          {
+            "label": "Documentación",
+            "href": "/docs"
+          }
         ]
       },
       "company": {
         "title": "Empresa",
         "links": [
-          { "label": "Acerca de", "href": "https://www.iberant.es" },
-          { "label": "Carreras", "href": "https://www.iberant.es" },
-          { "label": "Contacto", "href": "#contact" }
+          {
+            "label": "Acerca de",
+            "href": "https://www.iberant.es"
+          },
+          {
+            "label": "Carreras",
+            "href": "https://www.iberant.es"
+          },
+          {
+            "label": "Contacto",
+            "href": "#contact"
+          }
         ]
       },
       "legal": {
         "title": "Legal",
         "links": [
-          { "label": "Política de Privacidad", "href": "/privacy" },
-          { "label": "Términos de Servicio", "href": "/terms" },
-          { "label": "Política de Cookies", "href": "/cookies" }
+          {
+            "label": "Política de Privacidad",
+            "href": "/privacy"
+          },
+          {
+            "label": "Términos de Servicio",
+            "href": "/terms"
+          },
+          {
+            "label": "Política de Cookies",
+            "href": "/cookies"
+          }
         ]
       }
     },
@@ -312,7 +339,8 @@
       "Cifrado en tránsito y en reposo con estándares de Microsoft Azure"
     ],
     "copyright": "© 2025 ChurroStack. Todos los derechos reservados.",
-    "madeWith": "Hecho con ❤️ para equipos de infraestructura"
+    "madeWith": "Hecho con ❤️ para equipos de infraestructura",
+    "cookiePreferences": "Preferencias de cookies"
   },
   "privacy": {
     "title": "Política de Privacidad",
@@ -459,5 +487,33 @@
         "content": "Si tiene cualquier pregunta sobre esta Política de Cookies o sobre nuestro uso de cookies, puede contactarnos en:\n\nIBERANT SOLUTIONS S.L.\nEmail: info@iberant.com\nTeléfono: (+34) 620 219 379\nDirección: Paseo de la Castellana, 95, Piso 29, Torre Europa, 28046 Madrid, España\n\nTambién puede contactar con la Agencia Española de Protección de Datos (AEPD) en www.aepd.es si tiene inquietudes sobre cómo gestionamos las cookies y sus datos personales."
       }
     ]
+  },
+  "cookieBanner": {
+    "title": "Valoramos tu privacidad",
+    "description": "Usamos cookies para mejorar tu experiencia de navegación y analizar el tráfico del sitio. Las cookies analíticas solo se activan con tu consentimiento explícito. Puedes gestionar tus preferencias en cualquier momento.",
+    "acceptAll": "Aceptar todas",
+    "rejectAll": "Rechazar todas",
+    "managePreferences": "Gestionar preferencias",
+    "preferences": {
+      "title": "Preferencias de privacidad",
+      "save": "Guardar preferencias"
+    },
+    "necessary": {
+      "title": "Estrictamente necesarias",
+      "description": "Estas cookies son esenciales para el funcionamiento del sitio web. No se pueden desactivar. Permiten funciones básicas como la seguridad, la gestión de sesiones y tus preferencias de cookies."
+    },
+    "analytics": {
+      "title": "Analíticas",
+      "description": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web. Todos los datos se recopilan de forma anónima. Usamos Google Analytics para medir vistas de página, duración de sesiones y patrones de navegación. Estas cookies solo se activan con tu consentimiento explícito."
+    },
+    "moreInfo": {
+      "title": "Más información",
+      "description": "Para más detalles sobre cómo usamos las cookies, consulta nuestra <a href=\"/es/cookies\" class=\"cc-link\">Política de Cookies</a> y nuestra <a href=\"/es/privacy\" class=\"cc-link\">Política de Privacidad</a>. Puedes actualizar tus preferencias de consentimiento en cualquier momento usando el botón de configuración de cookies."
+    },
+    "cookieTable": {
+      "header": "Descripción",
+      "ga": "Registra un ID único para generar datos estadísticos sobre cómo usas el sitio web. Caduca en 2 años.",
+      "gid": "Registra un ID único para generar datos estadísticos sobre cómo usas el sitio web. Caduca en 24 horas."
+    }
   }
 }
